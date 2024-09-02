@@ -1,0 +1,94 @@
+
+/* we need to change the color with the root variable */
+
+
+:root{
+  --primary-color : #d1daed;
+  --secondary-color : #212121;
+}
+
+.dark-theme{
+  /* primary #04081c */
+  --primary-color : #030c39;
+  --secondary-color : #fff;
+}
+
+#nav{
+  position: fixed;
+  top: 20px;
+  right: 0;
+  width: 70px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+
+#nav .nav-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+}
+.nav-content .toggle-btn,
+.nav-content span a{
+  height: 50px;
+  width: 50px;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.nav-content .toggle-btn{
+  font-size: 35px;
+  color: var(--primary-color);
+  z-index: 100;
+  cursor: pointer;
+  transform: rotate(-225deg);
+  transition: all 0.6s ease;
+}
+#nav.open .toggle-btn{
+  transform: rotate(0deg);
+}
+.nav-content span{
+  position: absolute;
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+#nav.open .nav-content span{
+  transform: rotate(calc(var(--i) * (360deg/8))) translateY(90px);
+  opacity: 1;
+}
+.nav-content span a{
+  text-decoration: none;
+  transform: rotate(45deg);
+}
+.nav-content span a i{
+  font-size: 24px;
+  color: var(--primary-color);
+  transform: rotate(calc(var(--i) * (360deg/ -8)));
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.nav-content span a:hover i{
+  opacity: 1;
+}
+
+#nav{
+  display: none;
+}
+
+
+@media (max-width: 1000px) {
+  
+  .margin-top-30 {
+    margin-top: 65px;
+    /* margin-right: -15%; */
+  }
+  #nav{
+    display:block;
+  }
+}

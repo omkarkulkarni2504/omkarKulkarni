@@ -1,0 +1,294 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* we need to change the color with the root variable */
+:root {
+    --primary-color: #d1daed;
+    --secondary-color: #212121;
+}
+
+.dark-theme {
+    --primary-color: #030c39;
+    --secondary-color: #fff;
+}
+
+
+
+
+
+.hero{
+    /* border: solid 5px red; */
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    background: var(--primary-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    overflow: hidden;
+}
+
+.hero nav{
+    /* border: solid 5px rgb(0, 174, 255); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 84%;
+    height: 10vh;
+
+    margin: auto;
+    margin-top: 10px;
+    align-items: center;
+
+}
+
+.hero nav .logo{
+    width: 250px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.hero nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: right;
+    list-style: none;
+}
+
+
+.hero nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.hero nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s, border 0.3s, padding 0.3s;
+}
+
+.hero nav ul li a:hover {
+    color: #ff4321;
+    border: 2px solid #ff4321;
+    padding: 7px 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+
+
+.hero nav #icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.hero #main-page{
+    /* border: solid 5px rgb(32, 137, 13); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hero #main-page .main{
+    /* border: solid 5px rgb(21, 51, 16); */
+    width: 50%;
+}
+
+
+
+
+.hero #main-page .main .info{
+    /* border: solid 5px rgb(30, 30, 197); */
+
+    margin-left: 18%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+
+
+.hero #main-page .info h1 {
+    font-size: 70px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.hero #main-page .info p {
+    color: var(--secondary-color);
+    line-height: 22px;
+    margin-top: -10px;
+}
+
+.hero #main-page .info a {
+    background: var(--secondary-color);
+    padding: 10px 18px;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+
+
+.hero #main-page .main .social-link {
+    /* border: solid 5px rgb(30, 172, 197); */
+    margin-left: 18%;
+}
+
+.hero #main-page .main .social-link a {
+    font-size: 30px;
+    color: var(--secondary-color);
+    margin-right: 20px;
+}
+
+.hero #main-page .main .social-link a:hover {
+    color: #ff4321;
+}
+
+
+
+
+
+
+
+
+
+
+.hero #main-page .img-box{
+    /* border: solid 15px rgb(112, 46, 226); */
+    height: 90vh;
+    width: 50%;
+
+    /* position: absolute; */
+    bottom: 0;
+    right: 30%;
+
+
+    
+}
+
+.hero #main-page .img-box img{
+    height: 90vh;
+
+    position: absolute;
+    left: 51%;
+    bottom: -10px;
+    transform: translateX(15%);
+    transition: bottom 1s, left 1s;
+
+}
+
+.hero #main-page .img-box:hover .back-img {
+    bottom: 40px;
+}
+
+.hero #main-page .img-box:hover .main-img {
+    left: 55%;
+}
+
+
+
+span {
+    color: #ff4321;
+}
+
+
+
+/* image toggle resizing */
+
+@media (max-width: 1400px){
+    .hero #main-page .img-box img{
+        transform: translateX(-5%);
+    }
+
+}
+
+@media (max-width: 1200px){
+    .hero #main-page .img-box img{
+        transform: translateX(-15%);
+    }
+
+}
+
+@media (max-width: 1000px){
+    .hero #main-page .img-box img{
+        transform: translateX(-30%);
+    }
+
+    .hero nav ul, .hero nav #icon{
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 800px){
+    .hero #main-page .img-box img{
+        transform: translateX(-52%);
+    }
+
+
+    .hero #main-page{
+        flex-direction: column-reverse;
+    }
+    
+    .hero #main-page .main{
+        width: 100%;
+    }
+
+
+    .hero #main-page .main .social-link {
+        margin: 20px;
+        margin-left: 8%;
+    }
+    .hero #main-page .main .info{
+        margin-left: 8%;
+    }
+
+}
+
+
+@media (max-width: 600px){
+    
+    .nobr{
+        display: none;
+    }
+
+    .hero #main-page .img-box img{
+        transform: translateX(-56%);
+    }
+
+}
+
+@media (max-width: 480px){
+    
+    .nobr{
+        display: none;
+    }
+
+    .hero #main-page .img-box img{
+        transform: translateX(-75%);
+        height: 80vh;
+    
+        position: absolute;
+        left: 70%;
+        bottom: -10px;
+        transition: bottom 1s, left 1s;
+    }
+
+
+}
+
+
+

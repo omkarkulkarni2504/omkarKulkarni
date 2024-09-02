@@ -1,0 +1,144 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #d1daed;
+    --secondary-color: #212121;
+    --input-box :#d0dbf7;
+    --main-content:#ecf1fe;
+}
+
+.dark-theme {
+    --primary-color: #030c39;
+    --secondary-color: #fff;
+    --input-box :#030c39;
+    --main-content:#142a58;
+
+}
+
+.contact{
+    display: flex;
+    font-size: larger;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.connect{
+    /* border: 4px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.connect h3, .connect ul, .connect .social-link, .contact-container h3{
+    margin: 16px;
+}
+
+.connect li{
+    list-style: none;
+    margin: 20px;
+}
+
+/* contact-container */
+
+.contact-container{
+    /* border: 4px solid rgb(98, 0, 255); */
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    width: 450px;
+    padding: 20px;
+    background-color: var(--main-content);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container .contacts-input{
+    margin: 7px;
+    /* margin-left: 17px; */
+    height: 50px;
+    width: 100;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5%;
+    background-color: var(--input-box);
+}
+
+.contacts-input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none; 
+    font-size: 16px;
+    color: var(--secondary-color); 
+}
+
+
+.contact-container .contact-button{
+    background: #ff4321;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+
+.contact-button:hover{
+    background-color: var(--primary-color);
+    color:  var(--secondary-color);
+    
+}
+
+.contacts-input{
+    border: none;
+}
+
+
+.contact-container #textarea{
+    height: 200px;
+}
+
+.connect .social-link a{
+    font-size: 25px;
+}
+.connect .ico, form h3{
+    color: #ff4321;
+}
+
+
+@media (max-width: 700px) {
+
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .connect {
+        margin-left: -25%;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+
+    .contact-container{
+        /* border: 4px solid rgb(98, 0, 255); */
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        /* margin-left: -2%; */
+        /* width: 450px; */
+    }
+}
+
+
+
+
+
+
